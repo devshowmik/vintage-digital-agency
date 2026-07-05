@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | DivDeveloper</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { vintage: { bg: '#f4ecd8', text: '#3b2f2f', border: '#8a7968', accent1: '#a44238', accent2: '#4a675e', paper: '#e8ddc5' } },
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], mono: ['"Courier Prime"', 'monospace'] },
+                    boxShadow: { 'vintage': '4px 4px 0px 0px rgba(138,121,104,1)' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f4ecd8;
+            color: #3b2f2f;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .vintage-border {
+            border: 2px solid #8a7968;
+        }
+
+        .vintage-double {
+            border: 6px double #8a7968;
+        }
+
+        .hr-vintage {
+            border: 0;
+            height: 1px;
+            background: #8a7968;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .hr-vintage::after {
+            content: "❖";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f4ecd8;
+            padding: 0 10px;
+            color: #8a7968;
+            font-size: 1.2rem;
+        }
+
+        /* Form styles */
+        .vintage-input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px dashed #8a7968;
+            outline: none;
+            font-family: "Courier Prime", monospace;
+            padding: 8px 0;
+            color: #3b2f2f;
+        }
+
+        .vintage-input:focus {
+            border-bottom-color: #a44238;
+        }
+
+        .vintage-input::placeholder {
+            color: #8a7968;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body class="font-mono min-h-screen flex flex-col items-center py-8 px-4 sm:px-8">
+    <main class="w-full max-w-4xl vintage-double bg-vintage-paper p-6 sm:p-12 shadow-vintage relative">
+        <!-- Navigation -->
+        <nav
+            class="mb-10 vintage-border p-4 bg-vintage-bg shadow-vintage text-center flex flex-wrap justify-center gap-4 text-sm uppercase tracking-widest font-bold">
+            <a href="index.html" class="hover:text-vintage-accent1 transition-colors">Home</a>
+            <span class="text-vintage-border">|</span>
+            <a href="portfolio.html" class="hover:text-vintage-accent1 transition-colors">Portfolio</a>
+            <span class="text-vintage-border">|</span>
+            <a href="pricing.html" class="hover:text-vintage-accent1 transition-colors">Pricing</a>
+            <span class="text-vintage-border">|</span>
+            <a href="faq.html" class="hover:text-vintage-accent1 transition-colors">FAQs</a>
+            <span class="text-vintage-border">|</span>
+            <a href="contact.html" class="text-vintage-accent1">Contact</a>
+        </nav>
+
+        <header class="text-center mb-10">
+            <h1 class="font-serif text-5xl font-bold mb-4 text-vintage-text tracking-tight">Post a Letter</h1>
+            <p class="font-serif italic text-xl text-vintage-accent2">Reach out via telegram to commence our
+                partnership.</p>
+            <hr class="hr-vintage">
+        </header>
+
+        <section class="max-w-xl mx-auto mb-12 bg-vintage-bg p-8 vintage-border shadow-vintage">
+            <form action="#" method="get" class="flex flex-col gap-6"
+                onsubmit="event.preventDefault(); alert('Telegram sent successfully!');">
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-widest font-bold text-vintage-border mb-1" for="name">Your
+                        Name</label>
+                    <input type="text" id="name" class="vintage-input w-full" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-widest font-bold text-vintage-border mb-1"
+                        for="email">Electronic Mail Address</label>
+                    <input type="email" id="email" class="vintage-input w-full" placeholder="john@example.com" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="text-xs uppercase tracking-widest font-bold text-vintage-border mb-1"
+                        for="message">Your Inquiry</label>
+                    <textarea id="message" rows="4" class="vintage-input w-full resize-none"
+                        placeholder="I would like to commission a website..." required></textarea>
+                </div>
+
+                <button type="submit"
+                    class="mt-4 bg-vintage-text text-vintage-bg py-3 uppercase tracking-widest font-bold hover:bg-vintage-accent1 transition-colors vintage-border border-vintage-text hover:border-vintage-accent1">
+                    Send Dispatch
+                </button>
+            </form>
+        </section>
+
+        <footer class="text-center mt-16 text-xs text-vintage-border uppercase tracking-wide">
+            © 2026 DivDeveloper. Designed with Vintage Flair.
+        </footer>
+    </main>
+</body>
+
+</html>

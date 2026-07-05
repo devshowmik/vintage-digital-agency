@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DivDeveloper | Vintage Web Design Agency</title>
+    <!-- Google Fonts for Vintage Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vintage: {
+                            bg: '#f4ecd8',
+                            text: '#3b2f2f',
+                            border: '#8a7968',
+                            accent1: '#a44238', // muted red
+                            accent2: '#4a675e', // muted teal
+                            paper: '#e8ddc5'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        mono: ['"Courier Prime"', 'monospace'],
+                    },
+                    boxShadow: {
+                        'vintage': '4px 4px 0px 0px rgba(138,121,104,1)',
+                        'vintage-hover': '2px 2px 0px 0px rgba(138,121,104,1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Vintage Styles */
+        body {
+            background-color: #f4ecd8;
+            color: #3b2f2f;
+            /* Subtle noise texture */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .vintage-border {
+            border: 2px solid #8a7968;
+        }
+
+        .vintage-dashed {
+            border: 2px dashed #8a7968;
+        }
+
+        .vintage-double {
+            border: 6px double #8a7968;
+        }
+
+        /* Classic print layout lines */
+        .hr-vintage {
+            border: 0;
+            height: 1px;
+            background: #8a7968;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .hr-vintage::after {
+            content: "❖";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f4ecd8;
+            padding: 0 10px;
+            color: #8a7968;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body class="font-mono min-h-screen flex flex-col items-center py-8 px-4 sm:px-8">
+
+    <!-- Main Container styled like a classic newspaper or vintage poster -->
+    <main class="w-full max-w-4xl vintage-double bg-vintage-paper p-6 sm:p-12 shadow-vintage relative">
+
+        <!-- Navigation -->
+        <nav
+            class="mb-10 vintage-border p-4 bg-vintage-bg shadow-vintage text-center flex flex-wrap justify-center gap-4 text-sm uppercase tracking-widest font-bold">
+            <a href="index.html" class="text-vintage-accent1">Home</a>
+            <span class="text-vintage-border">|</span>
+            <a href="portfolio.html" class="hover:text-vintage-accent1 transition-colors">Portfolio</a>
+            <span class="text-vintage-border">|</span>
+            <a href="pricing.html" class="hover:text-vintage-accent1 transition-colors">Pricing</a>
+            <span class="text-vintage-border">|</span>
+            <a href="faq.html" class="hover:text-vintage-accent1 transition-colors">FAQs</a>
+            <span class="text-vintage-border">|</span>
+            <a href="contact.html" class="hover:text-vintage-accent1 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h2 class="text-sm tracking-[0.3em] uppercase text-vintage-border mb-2 font-bold">Est. 2022 • Global Agency
+            </h2>
+            <h1 class="font-serif text-5xl sm:text-7xl font-bold mb-4 text-vintage-accent1 tracking-tight">DivDeveloper
+            </h1>
+            <p class="font-serif italic text-xl sm:text-2xl text-vintage-accent2">"Your Partner in Digital Excellence."
+            </p>
+            <hr class="hr-vintage">
+        </header>
+
+        <!-- Intro Section -->
+        <section class="mb-12 text-center max-w-2xl mx-auto">
+            <p class="text-lg leading-relaxed">
+                <span class="text-3xl font-serif font-bold text-vintage-accent1">W</span>e are a premier web design &
+                development agency dedicated to crafting responsive, SEO-friendly digital experiences. From modern
+                startup websites to robust e-commerce platforms, we bring your vision to life.
+            </p>
+        </section>
+
+        <!-- Expertise Grid -->
+        <section class="mb-12">
+            <h3
+                class="font-serif text-3xl font-bold text-center mb-8 uppercase tracking-widest border-b-2 border-vintage-border pb-2 inline-block mx-auto block w-max">
+                Our Expertise</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Skill 1 -->
+                <div class="vintage-dashed p-6 bg-vintage-bg hover:shadow-vintage transition-shadow cursor-pointer">
+                    <h4 class="font-serif text-xl font-bold text-vintage-accent1 mb-2">WordPress & Elementor</h4>
+                    <p class="text-sm">Classic content management meets powerful visual editing. Highly customizable and
+                        SEO friendly.</p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="vintage-dashed p-6 bg-vintage-bg hover:shadow-vintage transition-shadow cursor-pointer">
+                    <h4 class="font-serif text-xl font-bold text-vintage-accent2 mb-2">React.js & Next.js</h4>
+                    <p class="text-sm">Modern, lightning-fast web applications. The pinnacle of contemporary digital
+                        engineering.</p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="vintage-dashed p-6 bg-vintage-bg hover:shadow-vintage transition-shadow cursor-pointer">
+                    <h4 class="font-serif text-xl font-bold text-vintage-border mb-2">UI/UX Design</h4>
+                    <p class="text-sm">Intuitive interfaces and exceptional user experiences tailored to your brand's
+                        unique identity.</p>
+                </div>
+                <!-- Skill 4 -->
+                <div class="vintage-dashed p-6 bg-vintage-bg hover:shadow-vintage transition-shadow cursor-pointer">
+                    <h4 class="font-serif text-xl font-bold text-vintage-text mb-2">E-Commerce</h4>
+                    <p class="text-sm">Robust online storefronts designed to captivate customers and drive global sales.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Worldwide Section -->
+        <section class="mb-12 text-center vintage-border p-8 bg-vintage-bg">
+            <h3 class="font-serif text-2xl font-bold mb-4">Serving a Global Clientele</h3>
+            <p class="text-sm uppercase tracking-widest leading-loose">
+                Bangladesh • Netherlands • Australia • Canada • England • Europe
+            </p>
+        </section>
+
+        <!-- Footer / CTA -->
+        <footer class="text-center mt-16">
+            <hr class="hr-vintage">
+            <h3 class="font-serif text-3xl font-bold mb-6">Ready to Transform Your Digital Presence?</h3>
+            <a href="https://divdeveloper.com/contact/"
+                class="inline-block bg-vintage-text text-vintage-bg px-8 py-4 uppercase tracking-widest font-bold shadow-vintage hover:shadow-vintage-hover hover:translate-y-[2px] hover:translate-x-[2px] transition-all vintage-border">
+                Get Started Today
+            </a>
+            <p class="mt-8 text-xs text-vintage-border uppercase tracking-wide">© 2026 DivDeveloper. Designed with
+                Vintage Flair.</p>
+        </footer>
+
+        <!-- Corner Ornaments (CSS only) -->
+        <div class="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-vintage-border"></div>
+        <div class="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-vintage-border"></div>
+        <div class="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-vintage-border"></div>
+        <div class="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-vintage-border"></div>
+    </main>
+
+</body>
+
+</html>
