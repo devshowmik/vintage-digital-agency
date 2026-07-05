@@ -4,7 +4,7 @@ A retro-inspired web development agency website designed with the nostalgic look
 
 ## 🌐 Live Demo
 
-👉 https://your-live-site.com
+👉 https://devshowmik.github.io/vintage-digital-agency/
 
 ## ✨ Features
 
@@ -36,7 +36,7 @@ Open the project folder and launch `index.html` in your browser.
 
 Visit the live website:
 
-https://your-live-site.com
+https://devshowmik.github.io/vintage-digital-agency/
 
 ## 📄 License
 
